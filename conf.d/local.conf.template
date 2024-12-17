@@ -1,6 +1,6 @@
 server {
     listen ${NGINX_APP_PORT};
-    server_name ${DOMAIN};
+    server_name ${MAIN_DOMAIN};
     charset utf-8;
     client_max_body_size 100M;
     proxy_read_timeout 480s;
