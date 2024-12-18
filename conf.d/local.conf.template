@@ -1,7 +1,7 @@
 server {
     listen ${NGINX_APP_PORT};
     server_name ${MAIN_DOMAIN};
-    charset utf-8;
+    charset ${ENCODING};
     client_max_body_size 100M;
     proxy_read_timeout 480s;
 
@@ -22,11 +22,11 @@ server {
     }
 
     location /static/ {
-        alias /Django/staticfiles/;
+        alias /api/staticfiles/;
     }
 
     location /media/ {
-        alias /Django/media/;
+        alias /api/media/;
     }
 
     location /redis/ {
